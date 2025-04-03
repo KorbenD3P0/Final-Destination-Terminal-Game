@@ -705,10 +705,11 @@ while True:
     # Winning Condition (Reaching Front Porch with all evidence after the twist)
     if player['location'] == "Front Porch" and player['found_evidence'] == 3:
         print("\nYou burst through the front door, the chilling realization about Death's plan still echoing in your mind.")
-        print("You manage to stumble off the porch, gasping for breath, just as a monstrous sound fills the air.")
-        print("The ground trembles, and the silhouette of a massive wrecking ball swings into view, obliterating the manor behind you.")
-        print("\nYou escaped... but you know Death will be back.")
-        print("\nCongratulations, you survived McKinley Manor... but did not hear the wrecking ball arcing back in your direction until it was too late. The manor isn't the only thing getting demolished today; ")
+        print("You manage to stumble off the porch, gasping for breath, the cold air stinging your lungs, a desperate reprieve earned in blood and fear.")
+        print("A monstrous roar, the guttural cry of metal and destruction, rips through the pre-dawn silence. The very ground beneath your trembling feet begins to shudder violently.")
+        print("Then you see it, a colossal shadow arcing against the bruised twilight sky - the wrecking ball, a mechanical leviathan of iron, swinging back with terrifying speed, an inevitable pendulum of doom.")
+        print("\nYou survived the night, clawed your way through the macabre theater of Death's design, and found proof of its insidious work. But in that final, fleeting moment of triumph, a horrifying truth slams into you: Death is not a force you outrun; it is a patient hunter, always circling back, its will an unyielding decree.")
+        print("A silent scream catches in your throat as the world dissolves into a deafening, apocalyptic impact. The last thing you feel is the crushing weight of oblivion, the manor and its secrets, and you, pulverized into dust and memory.")
         break
 
 print("\nGame Over")
