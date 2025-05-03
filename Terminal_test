@@ -19,7 +19,8 @@ rooms = {
     "Foyer": {"description": "A grand, yet decaying foyer. A crystal chandelier hangs precariously overhead, coated in dust. A wide staircase ascends to the upper floor. To the west, you see a shadowed living room, and to the east, a formal dining room.", "exits": {"upstairs": "Hallway", "west": "Living Room", "east": "Dining Room"}, "objects": ["dusty table"], "possible_containers": ["dusty table"]},
     "Living Room": {"description": "Overturned armchairs and a tattered sofa litter the living room. The air is thick with the smell of stale tobacco. A cold fireplace is the room's centerpiece. You might want to 'examine fireplace'.", "exits": {"east": "Foyer"}, "objects": ["fireplace"], "possible_containers": ["fireplace"]},
     "Dining Room": {"description": "A long, mahogany dining table is draped with a moth-eaten cloth. The silverware is tarnished, and cobwebs cling to the empty chairs.", "exits": {"west": "Foyer", "south": "Kitchen"}, "objects": ["dining table"], "possible_containers": ["cupboard"]},
-    "Kitchen": {"description": "The kitchen is a scene of chaotic disarray. Broken plates and scattered utensils cover the floor. The back door is heavily boarded up. You see a glint of metal near the sink.", "exits": {"north": "Dining Room"}, "objects": ["sink", "broken plates"], "possible_containers": []},
+    "Kitchen": {"description": "The kitchen is a scene of chaotic disarray. Broken plates and scattered utensils cover the floor. The back door is heavily boarded up. You see a glint of metal near the sink.", "exits": {"south": = "Outside", "north": "Dining Room"}, "objects" ["sink", "broken plates"], "possible_containers": []},
+    "Outside": {"description": "You are now outside the back of the manor. The air is damp and the sounds of the approaching demolition are much clearer.", "exits": {"north": "Kitchen"}, "objects": [], "possible_containers": []},
     "Library": {"description": "Towering bookshelves line the walls, filled with crumbling books. A large, oak desk sits in the center - its drawers slightly ajar and a book about urban demolition sitting open on top, featuring a wrecking ball doing what they do best.", "exits": {"east": "Foyer"}, "objects": ["bookshelves"], "possible_containers": ["desk", "bookshelves"]},
     "Hallway": {"description": "The upstairs hallway is eerily silent. Moonlight spills through a grimy window at the end of the hall. Doors lead to several bedrooms and a bathroom. The attic entrance is a dark, imposing doorway.", "exits": {"downstairs": "Foyer", "north": "Master Bedroom", "south": "Guest Bedroom 1", "east": "Guest Bedroom 2", "west": "Bathroom", "up": "Attic Entrance"}, "objects": [], "possible_containers": []},
     "Master Bedroom": {"description": "A massive four-poster bed dominates the room, its velvet curtains ripped and faded.","exits": {"south": "Hallway"},"objects": ["bed"], "possible_containers": ["nightstand"]},
@@ -197,6 +198,18 @@ def examine(command):
         specific_interaction = True
 
     # Collapsing Fireplace Hazard (after finding the brick)
+    elif current_room == "Foyer" and item.lower() == "dusty table":
+        print("You examine the dusty table. It wobbles slightly.")
+        if random.random() < 0.3: # 30% chance of triggering the chandelier
+            print("\nThe table shifts more dramatically, and you hear a loud CRACK from above!")
+            print("The crystal chandelier, its cable finally giving way, crashes down in a shower of glass shards!")
+            if player['location'] == "Foyer":
+                print("You are caught directly beneath it. The heavy fixture shatters upon impact, and you are impaled by razor-sharp crystals. Your investigation ends abruptly. Way to go.")
+                return True # Death by chandelier
+        else:
+            print("It seems stable enough for now.")
+        specific_interaction = True
+
     elif player['location'] == "Living Room" and item.lower() == "fireplace" and evidence["Brick"]["found"]:
         width = get_terminal_width()
         if random.random() < 0.6: # 60% chance of collapse after finding the brick
@@ -318,6 +331,12 @@ def take(command):
     item = " ".join(command[1:])
     current_room = player['location']
 
+    if item.lower() == "crowbar" and current_room.lower() == "workbench" and "crowbar" not in player['inventory']:
+        print("You take the crowbar from the workbench.")
+        player['inventory'].append("crowbar")
+        player['turns_left'] -= 1
+        return
+
     # Check if it's a key
     for key_name, key_info in keys.items():
         if key_info['location'] == current_room.lower() and item.lower() == key_name.lower():
@@ -425,7 +444,24 @@ def look_around():
     for direction, room in rooms[current_room]['exits'].items():
         locked_status = " (Locked)" if rooms[room].get('locked') else ""
         print(f"- {direction}: {room}{locked_status}")
-    player['turns_left'] -= 1
+    player['turns_left'] -= 0
+
+def use(command): # New command to use inventory items
+    if len(command) < 2:
+        print("Use what?")
+        return
+    item_to_use = command[1]
+    current_room = player['location']
+
+    if item_to_use.lower() == "crowbar" and current_room == "Kitchen" and "back door" in rooms["Kitchen"]["description"].lower():
+        print("You use the crowbar to pry open the boarded-up back door.")
+        rooms["Kitchen"]["description"] = "The kitchen is a scene of chaotic disarray. Broken plates and scattered utensils cover the floor. The back door is now open."
+        print("The exit to the south is now accessible.") # Inform the player about the new exit
+        player['turns_left'] -= 1
+        return
+    else:
+        print(f"You can't use the {item_to_use} here.")
+        player['turns_left'] -= 1
 
 def check_time():
     width = get_terminal_width()
