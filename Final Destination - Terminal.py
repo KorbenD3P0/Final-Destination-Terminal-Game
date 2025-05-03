@@ -641,67 +641,6 @@ while True:
 
 print("Thanks for playing!")
 
-# Game Loop
-game_intro()
-
-while True:
-    display_status()
-
-    if player['actions_taken'] > 0 and check_time():
-        break
-
-    if check_final_room():
-        break
-
-    command = get_input()
-
-    if not command:
-        continue
-
-    action_taken = False # Flag to track if a valid action was taken
-
-    if command[0] == "go":
-        move(command)
-        action_taken = True
-    elif command[0] == "examine":
-        examine(command)
-        action_taken = True
-    elif command[0] == "take":
-        take(command)
-        action_taken = True
-    elif command[0] == "unlock":
-        unlock(command)
-        action_taken = True
-    elif command[0] == "look" and len(command) > 1 and command[1] == "in":
-        look_in(command)
-        action_taken = True
-    elif command[0] == "look" and command[1] == "around":
-        look_around()
-        action_taken = True
-    elif command[0] == "inventory":
-        print("Inventory:", ", ".join(player['inventory']))
-    elif command[0] == "time":
-        print(f"Turns Left: {player['turns_left']}")
-    elif command[0] == "list":
-        list_actions()
-    elif command[0] == "help":
-        print("\nWelcome to Final Destination: Terminal.")
-        print("Your goal is to find 3 pieces of evidence and escape before time runs out.")
-        print("Explore the manor, interact with objects, and be careful.")
-        print("Type 'list' to see available actions.")
-    elif command[0] == "quit":
-        print("Thanks for playing!")
-        break
-    else:
-        print("I don't understand that command. Type 'list' for help.")
-
-    if action_taken:
-        player['actions_taken'] += 1
-
-    # Check for game over due to turns (again, after action)
-    if player['actions_taken'] > 0 and check_time():
-        break
-
     # Winning Condition (Reaching Front Porch with all evidence after the twist)
     if player['location'] == "Front Porch" and player['found_evidence'] == 3:
         print("\nYou burst through the front door, the chilling realization about Death's plan still echoing in your mind.")
