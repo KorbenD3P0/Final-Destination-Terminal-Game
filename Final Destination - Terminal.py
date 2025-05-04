@@ -44,17 +44,255 @@ stairs_interactions = 0
 bookshelves_interactions = 0
 
 evidence = {
-    "Brick": {"found": False, "location": "Living Room"},
-    "Toy SUV": {"found": False, "location": "Guest Bedroom 1"},
-    "Camera": {"found": False, "location": "Guest Bedroom 2"},
-    "Newspaper Clipping": {"found": False, "location": "Attic"} # Fixed location
+    "Photo of Jess Golden": {"found": False, "location": "[]", "character": "Jess Golden", "description": "Writing on back: Survived a club collapse but disappeared shortly after; her ultimate fate is unknown."},
+    "Motorcycle Debris": {"found": False, "location": "[]", "character": "Sebastian Lebecque", "description": "Piece of metal from a motorcycle crash that immolated Sebastian Lebecque after he escaped a club collapse."},
+    "Photo of Patti Fuller at Circuit City": {"found": False, "location": "[]", "character": "Patti Fuller", "description": "Writing on back: Implied to have died during an incident at Circuit City after surviving a subway bombing."},
+    "Photo of Will Sax at Circuit City": {"found": False, "location": "[]", "character": "Will Sax", "description": "Writing on back: Implied to have died during an incident at Circuit City after surviving a subway bombing."},
+    "Shard of Glass": {"found": False, "location": "[]", "character": "Zack Halloran", "description": "Sharp piece of glass from a falling pane that sliced Zack Halloran in half after he survived a subway bombing."},
+    "Bloody Hubcap": {"found": False, "location": "[]", "character": "Al Kinsey", "description": "A blood-stained Ferrari hubcap that decapitated Al Kinsey after he survived a subway bombing."},
+    "Dented Motorcycle Helmet": {"found": False, "location": "[]", "character": "Hal Ward", "description": "Hal Ward's helmet, found with his body after he drowned in a flash flood following his survival of a subway bombing."},
+    "Charred Metal Pail": {"found": False, "location": "[]", "character": "Susan Fries", "description": "A burnt metal pail that exploded after its contents came in contact with a live spark, killing Susan Frie. She had previously survived a subway bombing."},
+    "Rusty Blade": {"found": False, "location": "[]", "character": "Juliet Collins", "description": "A rusty knife, likely used by the Ripper (Bill Sangster), who killed Juliet Collins after she survived an explosion."},
+    "Photo of Bill Sangster": {"found": False, "location": "[]", "character": "Bill Sangster", "description": "Writing on back: Survived an explosion, did not survive being crushed by drawbridge gears. Later identified as the infamous Whitechapel Ripper. His final fate is unknown."},
+    "Piece of Corroded Pipe": {"found": False, "location": "[]", "character": "Matthew Upton", "description": "A section of pipe involved in the fiery death of Matthew Upton, who survived an explosion."},
+    "Small Cobra Figurine": {"found": False, "location": "[]", "character": "Hector Barnes", "description": "A small snake figurine, reminiscent of the cobras that killed Hector Barnes after he survived an explosion, following his interaction with an Egyptian sarcophagus."},
+    "Hieroglyph Fragment": {"found": False, "location": "[]", "character": "Mrs Stanley", "description": "A fragment with hieroglyphs, linked to an Egyptian sarcophagus that brought about the death by snakes of Mrs Stanley after she survived an explosion."},
+    "Photo of Andrew Caine": {"found": False, "location": "[]", "character": "Andrew Caine", "description": "Writing on back: Survived an explosion. His subsequent fate is unknown."},
+    "Shattered Glass Shards": {"found": False, "location": "[]", "character": "Stewart Tubbs", "description": "Fragments of glass jars from a hospital, linked to the death of Stewart Tubbs by inhaling noxious vapors after he survived an explosion."},
+    "Bloody Earbuds": {"found": False, "location": "[]", "character": "Aldis Escobar", "description": "Aldis Escobar died in a fiery car crash on Las Vegas Boulevard after his near-death experience in an elevator. He was listening to music on his iPod at the time."},
+    "Bloody Razor Blade": {"found": False, "location": "[]", "character": "Arlen Ploog", "description": "Arlen Ploog bled to death after being attacked by Tina with a razor blade."},
+    "Photo of Danny Larriva": {"found": False, "location": "[]", "character": "Danny Larriva", "description": "Photo with writing on the back: Danny Larriva was a ten-year-old boy beaten to death, likely by his mother's boyfriend, Roberto Diaz."},
+    "Photo of Roberto Diaz": {"found": False, "location": "[]", "character": "Roberto Diaz", "description": "Photo with writing on the back: Roberto Diaz was shot and then electrocuted by falling power lines after killing Danny Larriva."},
+    "Costume Feather": {"found": False, "location": "[]", "character": "Shawna Engels", "description": "Shawna Engels, a dancer, was killed by a panther that got loose backstage during a show."},
+    "Tom Gaines' Wedding Ring": {"found": False, "location": "[]", "character": "Tom Gaines", "description": "Tom Gaines was crushed to death by other passengers in a falling elevator."},
+    "Allie Goodwin-Gaines' Wedding Ring": {"found": False, "location": "[]", "character": "Allie Goodwin-Gaines", "description": "Allie Goodwin-Gaines was crushed by the falling elevator after surviving the initial plunge."},
+    "Warren Ackerman's Police Badge": {"found": False, "location": "[]", "character": "Warren Ackerman", "description": "Detective Warren Ackerman was electrocuted by falling power lines after shooting Roberto Diaz."},
+    "Piece of Traffic Light": {"found": False, "location": "[]", "character": "Officer Sean Murphy", "description": "Officer Sean Murphy was decapitated by a falling traffic light in a van crash."},
+    "Photo of Fred Newton": {"found": False, "location": "[]", "character": "Fred Newton", "description": "Photo with writing on the back: Fred Newton fell to his death from a malfunctioning elevator."},
+    "Photo of Ethel Newton": {"found": False, "location": "[]", "character": "Ethel Newton", "description": "Photo with writing on the back: Ethel Newton fell to her death from a malfunctioning elevator."},
+    "Bullet Casing": {"found": False,"location": "[]","character": "Macy","description": "Macy, a waitress who survived the club, was later killed by a falling metal panel dislodged by a bullet from Ben's gun. This casing is from the fatal shot."},
+    "Photo of Stairs": {"found": False,"location": "[]","character": "Eric","description": "Eric, who survived the club collapse, later died by breaking his neck in a fall down stairs at the hospital. This photo represents the location of his death."},
+    "Spent Bullet Casing": {"found": False,"location": "[]","character": "Ben","description": "Ben, who survived the club collapse, accidentally shot himself in the head with his own gun while fleeing the police. This spent casing was the cause of his death."},
+    "Medical Chart Spike": {"found": False,"location": "[]","character": "Jamie","description": "Jamie, a band member who survived the club, later died at the morgue when he was impaled by a falling medical chart spike. This spike is the object that killed him."},
+    "Photo of Jack Curtis": {"found": False, "location": "[]", "description": "Photo with writing on back describing how Jack Curtis was shot by Officer Beriev after the events in the precinct."},
+    "Photo of Lonnie": {"found": False, "location": "[]", "description": "Photo with writing on back describing Lonnie's miraculous survival of a thirteen-story fall after snagging on a phone wire, sustaining severe injuries."},
+    "Small Piece of Blood-Stained Fabric": {"found": False, "location": "[]", "description": "Small piece of fabric stained with blood from the knife attack Amy Tom survived in the alley."},
+    "Spent Bullet Casing": {"found": False, "location": "[]", "description": "A spent bullet casing from Officer Beriev's gun when he shot Jack Curtis in the aftermath of the precinct events."}, 
+    "Piece of Serrated Knife Blade": {"found": False, "location": "[]", "description": "A small, sharp piece of the serrated knife blade used by the man in the hood before he was shot and killed by Jack Curtis."},
+    "Photo of Chelsea Cox": {"found": False, "location": "[]", "description": "Photo with writing on back describing Chelsea Cox's death when she was hit in the eyes by falling icicles after escaping death's initial design."},
+    "Crumpled Metal Shard": {"found": False, "location": "[]", "description": "A small piece of twisted metal from Dawson Donahue's exploding car, detailing how the car then crushed him against a wall after he survived a garage fire."},
+    "Burnt Fabric Piece": {"found": False, "location": "[]", "description": "A small, burnt piece of fabric from Katie Astin's clothes after she was electrocuted by a fallen lighting rig, detailing her survival of earlier 'accidents'."},
+    "Shattered Record Shard": {"found": False, "location": "[]", "description": "A sharp shard from Joshua Cornell III's platinum record, detailing how it decapitated him after he survived falling stereo equipment."},
+    "Glass Bottle Neck Shard": {"found": False, "location": "[]", "description": "A sharp piece of the glass bottle neck that was shot into Dominique Swann's mouth after she survived choking on a nut."},
+    "Bloody Scalpel": {"found": False, "location": "[]", "character": "Rinoka", "description": "Survived a train crash, but died later in the hospital due to injuries exacerbated by falling surgical instruments and a bath."},
+    "Charred Matchbook": {"found": False, "location": "[]", "character": "Peter", "description": "Survived a train crash but died later, trapped in a restaurant fire."},
+    "Shattered Umbrella Spoke": {"found": False, "location": "[]", "character": "James", "description": "Survived a train crash but died later, impaled by umbrellas after being launched through a store window."},
+    "Piece of Tow Cable": {"found": False, "location": "[]", "character": "Bodil", "description": "Survived a train crash but died later, launched by a tow truck and impaled by umbrellas in a store."},
+    "Bloody Chainsaw Fragment": {"found": False, "location": "[]", "character": "Mary-Beth", "description": "Survived a train crash but died later, killed by falling scaffolding and a chainsaw."},
+    "Rusty Faucet Handle": {"found": False, "location": "[]", "character": "Andrew Williams", "description": "Died in a hospital, scalded in a bath."},
+    "Bloody Corkscrew": {"found": False, "location": "[]", "character": "Jack Cohen", "description": "Survived a train crash but died later, impaled in the eye with a corkscrew in Central Park."},
+    "Bottle of Acetic Acid": {"found": False, "location": "[]", "character": "Chablis", "description": "A small bottle of acetic acid, spilled near potassium ferricyanide, created deadly fumes that ended Chablis's life in a locked darkroom."},
+    "Section of Braided Hair Extension": {"found": False, "location": "[]", "character": "Shiraz", "description": "A piece of braided hair extension, tragically caught in spinning rims during a music video shoot, leading to Shiraz's violent death."},
+    "Toy Laundry Truck": {"found": False, "location": "[]", "character": "Gunter", "description": "A miniature laundry truck, a reminder of the vehicle that fatefully struck Gunter, severing his body."},
+    "Broken Cigarette Holder": {"found": False, "location": "[]", "character": "Merlot", "description": "Merlot's elegant cigarette holder, found broken amidst the chaos of the sinking ship, hinting at her final, trampled moments."},
+    "Piece of Seaweed": {"found": False, "location": "[]", "character": "Carlo", "description": "A piece of seaweed, tangled around Carlo's retrieved body, a morbid souvenir of his drowning after the ship's demise."},
+    "Miniature Buffet Table Piece": {"found": False, "location": "[]", "character": "Rose", "description": "A small piece from a miniature buffet table, crushing Rose against a bulkhead during the ship's violent tilt."},
+    "Spent Bullet Casing 2": {"found": False, "location": "[]", "character": "Brut", "description": "A spent bullet casing, symbolizing the explosion that threw Brut from the ship's deck into the fatal waters below."}, # Renamed duplicate key
+    "Photo of Sherry": {"found": False, "location": "[]", "character": "Sherry", "description": "A photo of Sherry. On the back, a chilling note describes her death after escaping the ship, tragically struck by a bus."},
+    "Photo of Alex Browning": {"found": False, "location": "[]", "character": "Alex Browning", "description": "A photo of Alex. Writing on the back describes how he survived the plane crash and is now being hunted by Death, narrowly escaping its design multiple times."},
+    "Retractable Clothesline Piece": {"found": False, "location": "[]", "character": "Tod Waggner", "description": "A piece of a retractable clothesline. Tod died when he slipped in his bathroom and accidentally hanged himself with the clothesline."},
+    "Photo of Clear Rivers": {"found": False, "location": "[]", "character": "Clear Rivers", "description": "A photo of Clear. Writing on the back describes her survival of the plane crash and her understanding that Death is coming for the survivors. She is actively trying to evade it."},
+    "Light Bulb": {"found": False, "location": "[]", "character": "Carter Horton", "description": "A light bulb from a large sign. Carter was killed when a falling sign crushed him."},
+    "Miniature Toy Bus": {"found": False, "location": "[]", "character": "Terry Chaney", "description": "A miniature model of a bus. Terry was tragically struck and killed by a speeding bus."},
+    "Charred Mug": {"found": False, "location": "[]", "character": "Valerie Lewton", "description": "A burnt and broken ceramic mug. Ms. Lewton died in a house fire caused by a series of unfortunate accidents."},
+    "Bloody Piece of Metal": {"found": False, "location": "[]", "character": "Billy Hitchcock", "description": "A jagged piece of metal, stained with what appears to be blood. Billy was decapitated by a piece of metal flung from a train."},
+    "Navel Piercing with Crystal": {"found": False, "location": "[]", "character": "Carrie Dreyer", "description": "A small navel piercing with a dangling crystal, belonging to Carrie Dreyer. She died in the Devil's Flight roller coaster crash."},
+    "Mud Flap Girl Necklace": {"found": False, "location": "[]", "character": "Frank Cheek", "description": "A cheap, chrome silhouette of a mud flap girl on a chain, won by Frank Cheek. He was decapitated by a fan after surviving the roller coaster crash."},
+    "Fuzzy Red Dice": {"found": False, "location": "[]", "character": "Rory Peters", "description": "A pair of fuzzy red dice, similar to those in Rory Peters' car. He died by being sliced into several chunks by wire fencing after surviving the route 23 pile-up."},
+    "Cigarette": {"found": False, "location": "[]", "character": "Kat Jennings", "description": "A cigarette, like the ones smoked by Kat Jennings. She died when her car's airbag deployed, impaling her head on a pipe after surviving the route 23 pile-up."},
+    "Pool Ball Keychain": {"found": False, "location": "[]", "character": "Eugene Dix", "description": "An orange striped pool ball keychain, the kind Eugene Dix owned. He died by accidental incineration in Lakeview Hospital along with Clear Rivers after surviving the route 23 pile-up."},
+    "Valium Pills": {"found": False, "location": "[]", "character": "Nora Carpenter", "description": "A bottle of Valium pills, like those taken by Nora Carpenter. She died when her head was pulled off by an elevator after surviving the route 23 pile-up."},
+    "Empty Water Bottle": {"found": False, "location": "[]", "character": "Tim Carpenter", "description": "An empty water bottle, like those Tim Carpenter used as drumsticks. He died being crushed by a falling plate glass window at a dentist's office after surviving the route 23 pile-up."},
+    "Nipple Ring": {"found": False, "location": "[]", "character": "Evan Lewis", "description": "A nipple ring, like the one worn by Evan Lewis. He died after being impaled through the facial by a fire ladder after surviving the highway pile-up."},
+    "Roxy Duffle Bag": {"found": False, "location": "[]", "character": "Shaina Gordon", "description": "A Roxy brand duffle bag, belonging to Shaina Gordon. She died in the highway pile-up."},
+    "Plastic Bag of Weed": {"found": False, "location": "[]", "character": "Dano Royale", "description": "A small plastic bag containing weed, like the one Dano Royale had. He died in the highway pile-up."},
+    "White Rose": {"found": False, "location": "[]", "character": "Isabella Hudson", "description": "A white rose, similar to those in Isabella Hudson's van for a memorial service. She survived the highway pile-up and Death's design by giving birth to her baby."},
+    "Work Gloves": {"found": False, "location": "[]", "character": "Brian Gibbons", "description": "A pair of work gloves, worn by Brian Gibbons. He died in an explosion caused by a barbeque grill and propane tank after surviving the Lakeview Apartments fire and a secondary attempt on his life by a news van."},
+    "Newspaper Clipping about Flight 180": {"found": False, "location": "[]", "character": "Clear Rivers", "description": "A newspaper clipping detailing the Flight 180 disaster and the subsequent deaths of the survivors. Clear Rivers, a survivor of Flight 180, died from gas in a hospital after helping the highway pile-up survivors."},
+    "Photo of Jason on Devil's Flight": {"found": False, "location": "[]", "character": "Jason Wise", "description": "A photo of Jason Wise on the Devil's Flight roller coaster. He died in the roller coaster crash."},
+    "Overexposed Photo of Kevin": {"found": False, "location": "[]", "character": "Kevin Fischer", "description": "An overexposed photo of Kevin Fischer. He survived the roller coaster crash but died later in a subway crash."},
+    "Photo of Lewis from Ring-The-Bell Game": {"found": False, "location": "[]", "character": "Lewis Romero", "description": "A photo of Lewis Romero at the Ring-The-Bell game, where he knocked off the bell. He survived the roller coaster crash but died later by being crushed by weights."},
+    "Photo of Ashley and Ashlyn at Clown Shoot": {"found": False, "location": "[]", "character": "Ashley Freund & Ashlyn Halperin", "description": "A photo of Ashley Freund and Ashlyn Halperin at the clown shoot game. They survived the roller coaster crash but died later in a tanning bed accident."},
+    "Photo of Ian with Banners": {"found": False, "location": "[]", "character": "Ian McKinley", "description": "A photo of Ian McKinley with banners in the background that look like teeth. He survived the roller coaster crash but died later by being crushed by a falling sign and cherry picker basket."},
+    "Photo of Erin": {"found": False, "location": "[]", "character": "Erin Ulmer", "description": "A photo of Erin Ulmer. She survived the Devil's Flight roller coaster premonition."},
+    "Photo of Julie Giving the Finger": {"found": False, "location": "[]", "character": "Julie Christensen", "description": "A photo of Julie Christensen giving the finger for the yearbook. She survived the Devil's Flight roller coaster premonition."},
+    "Photo of Perry": {"found": False, "location": "[]", "character": "Perry Malinowski", "description": "A photo of Perry Malinowski. She survived the Devil's Flight roller coaster premonition but died later at the fair."},
+    "Photo of Amber": {"found": False, "location": "[]", "character": "Amber Regan", "description": "A photo of Amber Regan. She survived the Devil's Flight roller coaster premonition."},
+    "Photo of Kimberly": {"found": False, "location": "[]", "character": "Kimberly Corman", "description": "A photo of Kimberly Corman. She survived the highway pile-up premonition and confronted Death at the lake."},
+    "Photo of Officer Burke": {"found": False, "location": "[]", "character": "Thomas Burke", "description": "A photo of Officer Thomas Burke. He survived the highway pile-up premonition."},
+    "Photo of Frankie": {"found": False, "location": "[]", "character": "Frankie Arnold", "description": "A photo of Frankie Arnold. He died in the highway pile-up."}
 }
 
 keys = {
-    "Attic Key": {"found": False, "location": "Library"},
-    "Basement Key": {"found": False, "location": "Bathroom"},
-    "Storage Room Key": {"found": False, "location": "Main Basement Area"}
+    "Attic Key": {"found": False, "location": "[]"},
+    "Basement Key": {"found": False, "location": "[]"},
+    "Storage Room Key": {"found": False, "location": "[]"}
 }
+
+def play_game():
+    """Encapsulates the main game loop."""
+    global player, ceiling_fan_pulled, escape_mode  # Reset global variables
+
+    # Reset game state
+    player = {
+        "location": "Front Porch",
+        "inventory": [],
+        "found_evidence": 0,
+        "turns_left": 60,
+        "actions_taken": 0
+    }
+    ceiling_fan_pulled = False
+    escape_mode = False
+    randomize_item_locations() # Re-randomize item locations for a new game
+
+    game_intro()
+
+    while True:
+        display_status()
+
+        if player['actions_taken'] > 0 and check_time():
+            print("\nGame Over")
+            return False  # Game ended due to time
+
+        death_occurred = False
+        if check_final_room():
+            # check_final_room can also return True if the player dies in the attic
+            death_occurred = True
+            print("\nGame Over") # Death message might already be in check_final_room
+            return False
+
+        command = get_input()
+
+        if not command:
+            continue
+
+        action_taken = False # Flag to track if a valid action was taken
+
+        if command[0] == "go":
+            if move(command): # move returns True if death occurred
+                death_occurred = True
+                print("\nGame Over") # Death message is inside move
+                break
+            action_taken = True
+        elif command[0] == "examine":
+            if examine(command): # examine returns True if death occurred
+                death_occurred = True
+                print("\nGame Over") # Death message is inside examine
+                break
+            action_taken = True
+        elif command[0] == "take":
+            take(command)
+            action_taken = True
+        elif command[0] == "unlock":
+            unlock(command)
+            action_taken = True
+        elif command[0] == "look" and len(command) > 1 and command[1] == "in":
+            look_in(command)
+            action_taken = True
+        elif command[0] == "look" and command[1] == "around":
+            look_around()
+            action_taken = True
+        elif command[0] == "inventory":
+            print("Inventory:", ", ".join(player['inventory']))
+        elif command[0] == "time":
+            print(f"Turns Left: {player['turns_left']}")
+        elif command[0] == "list":
+            list_actions()
+        elif command[0] == "help":
+            print("\nWelcome to Final Destination: Terminal.")
+            print("Your goal is to find 3 pieces of evidence and escape before time runs out.")
+            print("Explore the manor, interact with objects, and be careful.")
+            print("Type 'list' to see available actions.")
+        elif command[0] == "quit":
+            print("Thanks for playing!")
+            return False # Player quit
+
+        else:
+            print("I don't understand that command. Type 'list' for help.")
+
+        if action_taken:
+            player['actions_taken'] += 1
+
+        # Check for game over due to turns (again, after action)
+        if player['actions_taken'] > 0 and check_time():
+            print("\nGame Over")
+            return False
+
+        # Winning Condition
+        if player['location'] == "Front Porch" and player['found_evidence'] == 3:
+            print("\nYou burst through the front door...")
+            print("\nCongratulations, you survived McKinley Manor...")
+            return True # Player won
+
+        if death_occurred:
+            break
+
+    return False # Game over (death or other reason)
+
+# Main game loop that allows restarting
+while True:
+    game_over = not play_game() # play_game returns True on win, False on game over
+    if game_over:
+        play_again = input("Do you want to play again? (yes/no): ").lower()
+        if play_again != 'yes':
+            break
+    else:
+        break # Player won, no need to ask to play again
+
+def game_intro():
+    width = get_terminal_width()
+    print("\nFINAL DESTINATION: TERMINAL")
+    print("\nWelcome to McKinley, population: Dropping like flies.")
+    print("\nLocal tales speak of numerous accidental deaths, murders, and suicides attributed to something called 'Death's List'. It was always been nonsense to you. Past tense.")
+    print("You've just arrived at the abandoned residence of one William Bludworth - who has not been seen in some time, but it is said he held evidence proving Death was a force of nature out to claim survivors of multiple casualty disasters.")
+    print("\nYou are an investigative journalist determined to uncover the truth behind the legends of McKinley before the demolition of the place, which is supposed to be in 2 days.")
+
+    disasters = {
+    "massive plane crash": "You were seconds from boarding the flight when a chilling premonition stopped you cold. From the terminal window, you watched in horror as two passenger jets collided in a fiery explosion over McKinley, a catastrophe that claimed hundreds of lives.",
+    "devastating highway pile-up on Route 42": "You were merging onto Route 42 when you had an inexplicable urge to pull over. Just moments later, a devastating chain reaction of mangled metal erupted behind you, leaving dozens dead in the highway pile-up.",
+    "luxury ferry sinking in Lake Serenity": "You were on deck of the 'Queen Isabella' when a sudden wave of nausea hit you. Disembarking just minutes before its departure, you stood on the shore as the ferry tragically succumbed to the depths of Lake Serenity, taking countless souls with it.",
+    "terrifying rollercoaster derailment at 'Demon's Peak'": "You were strapped into your seat on the 'Demon's Peak' coaster when a last-second decision made you unbuckle and step off. A moment later, the ride began its ascent, only to derail in a terrifying spectacle, turning a day of thrills into a nightmare.",
+    "inferno at the 'Crimson Lounge' nightclub": "You were about to step into the 'Crimson Lounge' when a sudden feeling of dread washed over you, causing you to hesitate. Moments later, screams erupted from inside as the nightclub became an inferno, trapping many inside.",
+    "collapse of the McKinley Memorial Bridge": "You were driving onto the McKinley Memorial Bridge when you felt an unsettling vibration. Trusting your gut, you slammed on the brakes and reversed off just as the bridge buckled and plunged into the river below, a horrifying collapse.",
+    "explosion at the McKinley Chemical Plant": "You were walking near the McKinley Chemical Plant when an overwhelming sense of urgency compelled you to run. Barely out of range, you witnessed the devastating explosion that leveled the facility and took many lives.",
+    "wildfire that swept through McKinley National Forest": "You were hiking in McKinley National Forest when you noticed an unusual smell of smoke and an unnatural stillness in the air. You immediately turned back, narrowly escaping the rapidly spreading wildfire that left a trail of destruction.",
+    "freak storm that flooded downtown McKinley": "You were in downtown McKinley when an inexplicable feeling of unease made you seek higher ground. Minutes later, a freak storm unleashed torrential rain, flooding the streets and causing chaos and loss of life.",
+    "high-speed train collision outside McKinley": "You were waiting on the platform for the commuter train when a strange feeling urged you to step back from the edge. Just then, a freight train collided head-on with your train in a brutal impact with a high death toll.",
+    "ski lift malfunction": "You were halfway up the mountain on the ski lift when you heard a sickening grinding sound. A wave of dizziness washed over you, and you instinctively jumped onto a nearby snowdrift just as the lift cable snapped, sending chairs plummeting down the slope.",
+    "apartment collapse": "You were about to enter your apartment building when you noticed a hairline crack running along the facade. A sudden wave of panic hit you, and you backed away rapidly as the entire structure imploded in a cloud of dust and debris.",
+    "earthquake": "You were walking down a busy street when a subtle tremor ran through the ground. An overwhelming sense of danger made you dive under a sturdy awning just as the earthquake intensified, causing buildings to crumble around you.",
+    "typhoon": "You were near the coast when the weather took a sudden and violent turn. An inexplicable fear urged you to seek shelter inland, mere hours before a devastating typhoon made landfall, unleashing its fury on the coastline.",
+    "sinkhole": "You were walking across a seemingly normal patch of ground when you felt a slight give. An immediate sense of alarm made you leap backward as the earth opened up, swallowing the area you were just standing on into a massive sinkhole.",  
+    "cruise ship fire": "You were enjoying the evening festivities on the cruise ship when a sudden acrid smell filled the air. A powerful instinct told you to head for an emergency exit, just as flames erupted, engulfing a large section of the vessel.",
+    "dam break": "You were picnicking by the river downstream from the massive dam when you felt an unusual vibration in the ground. A primal urge to flee washed over you, and you ran uphill as a wall of water surged towards you, the dam having catastrophically failed.",
+    "gas pipeline explosion": "You were driving down a rural road when you noticed a faint hissing sound in the distance. An overwhelming sense of unease made you accelerate rapidly, narrowly escaping the massive fireball that erupted behind you as a gas pipeline exploded.",
+    "factory collapse": "You were visiting a local factory when you noticed some support beams groaning ominously. A sudden wave of claustrophobia made you rush towards the exit, just as the building's roof caved in, crushing everything below.",
+    "ferris wheel malfunction": "You were at the amusement park, about to board the giant Ferris wheel, when you saw a worrying flicker in the machinery. A strong feeling of unease made you decline, watching in horror as the wheel malfunctioned, sending cars spinning wildly."
+    }
+
+    chosen_disaster = random.choice(list(disasters.keys()))
+    disaster_description = disasters[chosen_disaster] # Get the description using the key
+    print(f"You have a personal stake because, as fate would have it, you recently walked away from a {chosen_disaster} that ended many lives.")
+    print(disaster_description) # Print the detailed description
+    print("More were lost afterwards, the other survivors.. in increasingly gruesome accidents. You are the last one left.")
+
+    print("\nYour goal is to find 3 key pieces of evidence related to people who saw Death coming before your own time runs out.")
+    print("You have a limited number of turns before dawn.")
+    print("Type 'list' to see available actions.")
+    print("\nExplore the grounds, interact with objects or examine evidence, and watch your step!")
+    print("\nGood luck...")
+    input("\nPress Enter to begin...")
+
 # Function to assign random containers to items
 def randomize_item_locations():
     # Assign random containers to keys
@@ -128,6 +366,7 @@ def display_status():
             print("\nThe distant hum is more noticeable now, and you occasionally hear a metallic clank.")
     elif player['turns_left'] <= 60 and player['turns_left'] > 45 and random.random() < 0.1:
         print("\nYou hear a faint, distant hum, like machinery far away, getting ready for a busy day in the morning.")
+
 def get_input():
     return input("> ").lower().split()
 
@@ -291,25 +530,6 @@ def examine(command):
 
         player['turns_left'] -= 1
     return False # No death
-
-# Reset interaction counters when starting a new game in play_game()
-def play_game():
-    global player, ceiling_fan_pulled, escape_mode
-    global sink_interactions, crate_interactions, stairs_interactions, bookshelves_interactions
-
-    # Reset game state
-    player = { ... }
-    ceiling_fan_pulled = False
-    escape_mode = False
-    randomize_item_locations()
-
-    # Reset interaction counters for a new game
-    sink_interactions = 0
-    crate_interactions = 0
-    stairs_interactions = 0
-    bookshelves_interactions = 0
-
-    game_intro()
 
 def take(command):
     if len(command) < 2:
@@ -485,160 +705,6 @@ def list_actions():
     print("  time - Check the number of turns left.")
     print("  quit - End the game.")
 
-def game_intro():
-    width = get_terminal_width()
-    print("\nFINAL DESTINATION: TERMINAL")
-    print("\nWelcome to McKinley, population: Dropping like flies.")
-    print("\nLocal tales speak of numerous accidental deaths, murders, and suicides attributed to something called 'Death's List'. It was always been nonsense to you. Past tense.")
-    print("You've just arrived at the abandoned residence of one William Bludworth - who has not been seen in some time, but it is said he held evidence proving Death was a force of nature out to claim survivors of multiple casualty disasters.")
-    print("\nYou are an investigative journalist determined to uncover the truth behind the legends of McKinley before the demolition of the place, which is supposed to be in 2 days.")
-
-    disasters = {
-    "massive plane crash": "You were seconds from boarding the flight when a chilling premonition stopped you cold. From the terminal window, you watched in horror as two passenger jets collided in a fiery explosion over McKinley, a catastrophe that claimed hundreds of lives.",
-    "devastating highway pile-up on Route 42": "You were merging onto Route 42 when you had an inexplicable urge to pull over. Just moments later, a devastating chain reaction of mangled metal erupted behind you, leaving dozens dead in the highway pile-up.",
-    "luxury ferry sinking in Lake Serenity": "You were on deck of the 'Queen Isabella' when a sudden wave of nausea hit you. Disembarking just minutes before its departure, you stood on the shore as the ferry tragically succumbed to the depths of Lake Serenity, taking countless souls with it.",
-    "terrifying rollercoaster derailment at 'Demon's Peak'": "You were strapped into your seat on the 'Demon's Peak' coaster when a last-second decision made you unbuckle and step off. A moment later, the ride began its ascent, only to derail in a terrifying spectacle, turning a day of thrills into a nightmare.",
-    "inferno at the 'Crimson Lounge' nightclub": "You were about to step into the 'Crimson Lounge' when a sudden feeling of dread washed over you, causing you to hesitate. Moments later, screams erupted from inside as the nightclub became an inferno, trapping many inside.",
-    "collapse of the McKinley Memorial Bridge": "You were driving onto the McKinley Memorial Bridge when you felt an unsettling vibration. Trusting your gut, you slammed on the brakes and reversed off just as the bridge buckled and plunged into the river below, a horrifying collapse.",
-    "explosion at the McKinley Chemical Plant": "You were walking near the McKinley Chemical Plant when an overwhelming sense of urgency compelled you to run. Barely out of range, you witnessed the devastating explosion that leveled the facility and took many lives.",
-    "wildfire that swept through McKinley National Forest": "You were hiking in McKinley National Forest when you noticed an unusual smell of smoke and an unnatural stillness in the air. You immediately turned back, narrowly escaping the rapidly spreading wildfire that left a trail of destruction.",
-    "freak storm that flooded downtown McKinley": "You were in downtown McKinley when an inexplicable feeling of unease made you seek higher ground. Minutes later, a freak storm unleashed torrential rain, flooding the streets and causing chaos and loss of life.",
-    "high-speed train collision outside McKinley": "You were waiting on the platform for the commuter train when a strange feeling urged you to step back from the edge. Just then, a freight train collided head-on with your train in a brutal impact with a high death toll.",
-    "ski lift malfunction": "You were halfway up the mountain on the ski lift when you heard a sickening grinding sound. A wave of dizziness washed over you, and you instinctively jumped onto a nearby snowdrift just as the lift cable snapped, sending chairs plummeting down the slope.",
-    "apartment collapse": "You were about to enter your apartment building when you noticed a hairline crack running along the facade. A sudden wave of panic hit you, and you backed away rapidly as the entire structure imploded in a cloud of dust and debris.",
-    "earthquake": "You were walking down a busy street when a subtle tremor ran through the ground. An overwhelming sense of danger made you dive under a sturdy awning just as the earthquake intensified, causing buildings to crumble around you.",
-    "typhoon": "You were near the coast when the weather took a sudden and violent turn. An inexplicable fear urged you to seek shelter inland, mere hours before a devastating typhoon made landfall, unleashing its fury on the coastline.",
-    "sinkhole": "You were walking across a seemingly normal patch of ground when you felt a slight give. An immediate sense of alarm made you leap backward as the earth opened up, swallowing the area you were just standing on into a massive sinkhole.",  
-    "cruise ship fire": "You were enjoying the evening festivities on the cruise ship when a sudden acrid smell filled the air. A powerful instinct told you to head for an emergency exit, just as flames erupted, engulfing a large section of the vessel.",
-    "dam break": "You were picnicking by the river downstream from the massive dam when you felt an unusual vibration in the ground. A primal urge to flee washed over you, and you ran uphill as a wall of water surged towards you, the dam having catastrophically failed.",
-    "gas pipeline explosion": "You were driving down a rural road when you noticed a faint hissing sound in the distance. An overwhelming sense of unease made you accelerate rapidly, narrowly escaping the massive fireball that erupted behind you as a gas pipeline exploded.",
-    "factory collapse": "You were visiting a local factory when you noticed some support beams groaning ominously. A sudden wave of claustrophobia made you rush towards the exit, just as the building's roof caved in, crushing everything below.",
-    "ferris wheel malfunction": "You were at the amusement park, about to board the giant Ferris wheel, when you saw a worrying flicker in the machinery. A strong feeling of unease made you decline, watching in horror as the wheel malfunctioned, sending cars spinning wildly."
-    }
-
-    chosen_disaster = random.choice(list(disasters.keys()))
-    disaster_description = disasters[chosen_disaster] # Get the description using the key
-    print(f"You have a personal stake because, as fate would have it, you recently walked away from a {chosen_disaster} that ended many lives.")
-    print(disaster_description) # Print the detailed description
-    print("More were lost afterwards, the other survivors.. in increasingly gruesome accidents. You are the last one left.")
-
-    print("\nYour goal is to find 3 key pieces of evidence related to people who saw Death coming before your own time runs out.")
-    print("You have a limited number of turns before dawn.")
-    print("Type 'list' to see available actions.")
-    print("\nExplore the grounds, interact with objects or examine evidence, and watch your step!")
-    print("\nGood luck...")
-    input("\nPress Enter to begin...")
-
-def play_game():
-    """Encapsulates the main game loop."""
-    global player, ceiling_fan_pulled, escape_mode  # Reset global variables
-
-    # Reset game state
-    player = {
-        "location": "Front Porch",
-        "inventory": [],
-        "found_evidence": 0,
-        "turns_left": 60,
-        "actions_taken": 0
-    }
-    ceiling_fan_pulled = False
-    escape_mode = False
-    randomize_item_locations() # Re-randomize item locations for a new game
-
-    game_intro()
-
-    while True:
-        display_status()
-
-        if player['actions_taken'] > 0 and check_time():
-            print("\nGame Over")
-            return False  # Game ended due to time
-
-        death_occurred = False
-        if check_final_room():
-            # check_final_room can also return True if the player dies in the attic
-            death_occurred = True
-            print("\nGame Over") # Death message might already be in check_final_room
-            return False
-
-        command = get_input()
-
-        if not command:
-            continue
-
-        action_taken = False # Flag to track if a valid action was taken
-
-        if command[0] == "go":
-            if move(command): # move returns True if death occurred
-                death_occurred = True
-                print("\nGame Over") # Death message is inside move
-                break
-            action_taken = True
-        elif command[0] == "examine":
-            if examine(command): # examine returns True if death occurred
-                death_occurred = True
-                print("\nGame Over") # Death message is inside examine
-                break
-            action_taken = True
-        elif command[0] == "take":
-            take(command)
-            action_taken = True
-        elif command[0] == "unlock":
-            unlock(command)
-            action_taken = True
-        elif command[0] == "look" and len(command) > 1 and command[1] == "in":
-            look_in(command)
-            action_taken = True
-        elif command[0] == "look" and command[1] == "around":
-            look_around()
-            action_taken = True
-        elif command[0] == "inventory":
-            print("Inventory:", ", ".join(player['inventory']))
-        elif command[0] == "time":
-            print(f"Turns Left: {player['turns_left']}")
-        elif command[0] == "list":
-            list_actions()
-        elif command[0] == "help":
-            print("\nWelcome to Final Destination: Terminal.")
-            print("Your goal is to find 3 pieces of evidence and escape before time runs out.")
-            print("Explore the manor, interact with objects, and be careful.")
-            print("Type 'list' to see available actions.")
-        elif command[0] == "quit":
-            print("Thanks for playing!")
-            return False # Player quit
-
-        else:
-            print("I don't understand that command. Type 'list' for help.")
-
-        if action_taken:
-            player['actions_taken'] += 1
-
-        # Check for game over due to turns (again, after action)
-        if player['actions_taken'] > 0 and check_time():
-            print("\nGame Over")
-            return False
-
-        # Winning Condition
-        if player['location'] == "Front Porch" and player['found_evidence'] == 3:
-            print("\nYou burst through the front door...")
-            print("\nCongratulations, you survived McKinley Manor...")
-            return True # Player won
-
-        if death_occurred:
-            break
-
-    return False # Game over (death or other reason)
-
-# Main game loop that allows restarting
-while True:
-    game_over = not play_game() # play_game returns True on win, False on game over
-    if game_over:
-        play_again = input("Do you want to play again? (yes/no): ").lower()
-        if play_again != 'yes':
-            break
-    else:
-        break # Player won, no need to ask to play again
-
 print("Thanks for playing!")
 
     # Winning Condition (Reaching Front Porch with all evidence after the twist)
@@ -652,3 +718,22 @@ print("Thanks for playing!")
         break
 
 print("\nGame Over")
+
+# Reset interaction counters when starting a new game in play_game()
+def play_game():
+    global player, ceiling_fan_pulled, escape_mode
+    global sink_interactions, crate_interactions, stairs_interactions, bookshelves_interactions
+
+    # Reset game state
+    player = { ... }
+    ceiling_fan_pulled = False
+    escape_mode = False
+    randomize_item_locations()
+
+    # Reset interaction counters for a new game
+    sink_interactions = 0
+    crate_interactions = 0
+    stairs_interactions = 0
+    bookshelves_interactions = 0
+
+    game_intro()
